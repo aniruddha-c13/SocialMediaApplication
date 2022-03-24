@@ -1,0 +1,41 @@
+====================================================================================================================================================
+Model of a Social Media Application:
+====================================
+
+This application consists of System, Post, and User classes.
+
+Specifications of the Classes:
+==============================
+
+System:
+=======
+
+- Maintains a list of all posts.
+- Maintains a list of all users.
+- Maintains the name of the application.
+- Maintains the current User using the system. Only one user is allowed at a time.
+- Access Control:
+--- There is a signUpUser(userName, password) method that adds a new User into the system.
+--- There is a signInUser(userID, password) method that sets the current User variable to the user with the given parameters. All actions pertaining to posting and following/unfollowing are done in the context of this user. If the user does not exist or the password is incorrect, access is denied.
+--- There is a signOutUser() method that resets the current User variable. After signOutUser() is called, any user-related functions fail.
+
+User:
+=====
+
+- Maintains a unique User ID.
+- Maintains a name, usernames do not contain spaces.
+- Maintains a password, passwords do not contain spaces.
+- Maintains a list of users they follow (List of User objects).
+- Maintains a list of their posts (List of Post objects).
+- Methods to create Posts and follow/unfollow another user.
+
+Post:
+=====
+
+- Maintains a unique Post ID.
+- Each post has a unique User who posts - the class maintains User ID Attribute.
+- Maintains content.
+- Maintains a year of posting.
+
+====================================================================================================================================================
+
